@@ -2,41 +2,52 @@
 
 // styles.scss
 
+:root {
+    --primary-bg: #333;
+    --primary-color: #fff;
+    --secondary-bg: #f4f4f4;
+    --container-bg: #fff;
+    --text-color: #555;
+    --heading-color: #444;
+    --box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    --border-radius: 8px;
+    --font-family: Arial, sans-serif;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    font-family: var(--font-family);
+    background-color: var(--secondary-bg);
     margin: 0;
     padding: 0;
 }
 
 header, footer {
-    background: #333;
-    color: #fff;
+    background: var(--primary-bg);
+    color: var(--primary-color);
     text-align: center;
     padding: 20px;
 }
 
 header {
-    margin-bottom: 20px; // Margen inferior para separar el header del contenido principal
+    margin-bottom: 20px; /* Margen inferior para separar el header del contenido principal */
 }
 
 footer {
-    margin-top: 20px; // Margen superior para separar el contenido principal del footer
+    margin-top: 20px; /* Margen superior para separar el contenido principal del footer */
 }
 
 .container {
-    
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
-    background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background: var(--container-bg);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
 }
 
 h2 {
     font-size: 18px;
-    color: #555;
+    color: var(--text-color);
     text-align: center;
     margin-bottom: 20px;
 }
@@ -47,7 +58,7 @@ h2 {
 
 h3 {
     font-size: 16px;
-    color: #444;
+    color: var(--heading-color);
     margin-bottom: 10px;
 }
 
@@ -58,6 +69,18 @@ ul {
 
 ul li {
     margin-bottom: 8px;
+    position: relative;
+    padding-left: 25px;
+}
+
+ul li::before {
+    content: "\f00c"; /* Código del ícono de Font Awesome */
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: var(--heading-color);
 }
 
 ul ul {
