@@ -44,7 +44,36 @@ button[type="submit"]:hover {
     background-color: #0056b3;
 }
 
-           
+.contact-frame {
+    border: 2px solid #ccc;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #fff;
+    max-width: 650px;
+    margin: 20px auto;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.contact-info {
+    font-family: Arial, sans-serif;
+    padding: 10px;
+}
+
+.info-item {
+    margin-bottom: 15px;
+}
+
+.label {
+    font-weight: bold;
+    color: #333;
+    display: block;
+    margin-bottom: 5px;
+}
+
+p {
+    margin: 0;
+    color: #555;
+}
 
       
     
